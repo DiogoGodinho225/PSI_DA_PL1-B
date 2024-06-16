@@ -62,5 +62,12 @@ namespace Projeto_DA
             menuextras.Show();
             this.Hide();
         }
+
+        private void btnpratos_Click(object sender, EventArgs e)
+        {
+            MenuPratos menupratos = new MenuPratos();
+            menupratos.Show();
+            this.Hide();
+        }
     }
 }

@@ -63,11 +63,18 @@
     <Compile Include="controladores\EstudantesController.cs" />
     <Compile Include="controladores\FuncionariosController.cs" />
     <Compile Include="controladores\QuantidadeExtrasController.cs" />
+    <Compile Include="controladores\QuantidadesPratosController.cs" />
     <Compile Include="vistas\AdicionarQuantidadeExtras.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\AdicionarQuantidadeExtras.Designer.cs">
       <DependentUpon>AdicionarQuantidadeExtras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\AdicionarQuantidadePrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\AdicionarQuantidadePrato.Designer.cs">
+      <DependentUpon>AdicionarQuantidadePrato.cs</DependentUpon>
     </Compile>
     <Compile Include="vistas\Menuextras.cs">
       <SubType>Form</SubType>
@@ -131,6 +138,9 @@
     <EmbeddedResource Include="vistas\AdicionarQuantidadeExtras.resx">
       <DependentUpon>AdicionarQuantidadeExtras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vistas\AdicionarQuantidadePrato.resx">
+      <DependentUpon>AdicionarQuantidadePrato.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\Menuextras.resx">
       <DependentUpon>Menuextras.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +167,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="vistas\MenuProfessores.resx">
       <DependentUpon>MenuProfessores.cs</DependentUpon>
@@ -175,7 +186,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Design sem nome %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReservEat-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f50524ee5f161f437400aaf215c9e12f.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

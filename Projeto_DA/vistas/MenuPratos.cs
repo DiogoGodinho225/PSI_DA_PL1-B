@@ -22,14 +22,17 @@ namespace Projeto_DA.vistas
         int id;
         Menuprincipal menuprincipal;
         List<Prato> pratos;
+        QuantidadePratosController quantidadePratosController;
 
         public MenuPratos()
         {
             InitializeComponent();
             context = new ProjetoContext();
             pratosController = new PratosController(context);
+            quantidadePratosController = new QuantidadePratosController(context);
             pratos = pratosController.ListarPratos();
             listPratos.DataSource = null;
+            txtQuantidade.Enabled = false;
             foreach (var extra in pratos)
             {
                 listPratos.DataSource = pratos.ToList();
@@ -110,9 +113,18 @@ namespace Projeto_DA.vistas
         private void PratosDoubleClick(object sender, EventArgs e)
         {
             Prato prato = (Prato)listPratos.SelectedItem;
+            int idPrato = prato.id;
             txtDescricao.Text = prato.descricao;
             txtTipo.Text = prato.tipo;
+            txtQuantidade.Text = quantidadePratosController.GetQuantidade(idPrato).ToString();
             id = pratosController.ProcurarPrato(txtDescricao.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdicionarQuantidadePrato adicionar = new AdicionarQuantidadePrato();
+            adicionar.Show();
+            this.Close();
         }
     }
 }

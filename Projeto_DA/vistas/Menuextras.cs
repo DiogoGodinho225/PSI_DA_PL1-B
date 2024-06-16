@@ -130,5 +130,7 @@ namespace Projeto_DA
             adicionarquantidade.Show();
             this.Close();
         }
+
+      
     }
 }

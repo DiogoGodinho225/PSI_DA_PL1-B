@@ -31,164 +31,214 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
             this.btnapagar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.btncriar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.listExtras = new System.Windows.Forms.ListBox();
             this.txtPreco = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(319, 392);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(87)))));
+            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVoltar.Location = new System.Drawing.Point(291, 327);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(2);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(75, 31);
+            this.btnVoltar.Size = new System.Drawing.Size(97, 32);
             this.btnVoltar.TabIndex = 45;
             this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btneditar
             // 
-            this.btneditar.Location = new System.Drawing.Point(319, 347);
-            this.btneditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btneditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(87)))));
+            this.btneditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btneditar.Location = new System.Drawing.Point(291, 262);
+            this.btneditar.Margin = new System.Windows.Forms.Padding(2);
             this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(75, 31);
+            this.btneditar.Size = new System.Drawing.Size(97, 32);
             this.btneditar.TabIndex = 44;
             this.btneditar.Text = "Editar";
-            this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.UseVisualStyleBackColor = false;
             this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btnapagar
             // 
-            this.btnapagar.Location = new System.Drawing.Point(319, 298);
-            this.btnapagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnapagar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(87)))));
+            this.btnapagar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnapagar.Location = new System.Drawing.Point(291, 226);
+            this.btnapagar.Margin = new System.Windows.Forms.Padding(2);
             this.btnapagar.Name = "btnapagar";
-            this.btnapagar.Size = new System.Drawing.Size(75, 31);
+            this.btnapagar.Size = new System.Drawing.Size(97, 32);
             this.btnapagar.TabIndex = 43;
             this.btnapagar.Text = "Apagar";
-            this.btnapagar.UseVisualStyleBackColor = true;
+            this.btnapagar.UseVisualStyleBackColor = false;
             this.btnapagar.Click += new System.EventHandler(this.btnapagar_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(261, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 16);
-            this.label4.TabIndex = 42;
-            this.label4.Text = "Descricao";
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(264, 53);
-            this.txtDescricao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescricao.Location = new System.Drawing.Point(329, 53);
+            this.txtDescricao.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(191, 22);
+            this.txtDescricao.Size = new System.Drawing.Size(76, 20);
             this.txtDescricao.TabIndex = 41;
             // 
             // btncriar
             // 
-            this.btncriar.Location = new System.Drawing.Point(319, 250);
-            this.btncriar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btncriar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(87)))));
+            this.btncriar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncriar.Location = new System.Drawing.Point(291, 190);
+            this.btncriar.Margin = new System.Windows.Forms.Padding(2);
             this.btncriar.Name = "btncriar";
-            this.btncriar.Size = new System.Drawing.Size(75, 31);
+            this.btncriar.Size = new System.Drawing.Size(97, 32);
             this.btncriar.TabIndex = 38;
             this.btncriar.Text = "Criar";
-            this.btncriar.UseVisualStyleBackColor = true;
+            this.btncriar.UseVisualStyleBackColor = false;
             this.btncriar.Click += new System.EventHandler(this.btncriar_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Extras";
             // 
             // listExtras
             // 
             this.listExtras.FormattingEnabled = true;
-            this.listExtras.ItemHeight = 16;
-            this.listExtras.Location = new System.Drawing.Point(12, 35);
-            this.listExtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listExtras.Location = new System.Drawing.Point(11, 49);
+            this.listExtras.Margin = new System.Windows.Forms.Padding(2);
             this.listExtras.Name = "listExtras";
-            this.listExtras.Size = new System.Drawing.Size(224, 388);
+            this.listExtras.Size = new System.Drawing.Size(188, 329);
             this.listExtras.TabIndex = 36;
             this.listExtras.DoubleClick += new System.EventHandler(this.ExtrasDoubleClick);
             // 
             // txtPreco
             // 
-            this.txtPreco.Location = new System.Drawing.Point(261, 109);
-            this.txtPreco.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPreco.Location = new System.Drawing.Point(329, 77);
+            this.txtPreco.Margin = new System.Windows.Forms.Padding(2);
             this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(191, 22);
+            this.txtPreco.Size = new System.Drawing.Size(76, 20);
             this.txtPreco.TabIndex = 46;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(261, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 16);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "Preço";
             // 
             // txtQuantidade
             // 
-            this.txtQuantidade.Location = new System.Drawing.Point(261, 169);
-            this.txtQuantidade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtQuantidade.Location = new System.Drawing.Point(329, 101);
+            this.txtQuantidade.Margin = new System.Windows.Forms.Padding(2);
             this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(191, 22);
+            this.txtQuantidade.Size = new System.Drawing.Size(76, 20);
             this.txtQuantidade.TabIndex = 48;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(261, 142);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 16);
-            this.label3.TabIndex = 49;
-            this.label3.Text = "Quantidade";
+            
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(261, 195);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(87)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(272, 136);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 24);
+            this.button1.Size = new System.Drawing.Size(133, 30);
             this.button1.TabIndex = 50;
             this.button1.Text = "Adicionar Quantidade";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Projeto_DA.Properties.Resources.Design_sem_nome__3_;
+            this.pictureBox1.Location = new System.Drawing.Point(-29, -15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(532, 427);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 63;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(59, 28);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 16);
+            this.label5.TabIndex = 64;
+            this.label5.Text = "Extras";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(226, 102);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 16);
+            this.label1.TabIndex = 65;
+            this.label1.Text = "Quantidade";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(270, 78);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 16);
+            this.label6.TabIndex = 66;
+            this.label6.Text = "Preço";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(238, 54);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 16);
+            this.label7.TabIndex = 67;
+            this.label7.Text = "Descricao";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Projeto_DA.Properties.Resources.f50524ee5f161f437400aaf215c9e12f;
+            this.pictureBox2.Location = new System.Drawing.Point(216, 43);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(223, 360);
+            this.pictureBox2.TabIndex = 68;
+            this.pictureBox2.TabStop = false;
             // 
             // Menuextras
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 450);
+            this.ClientSize = new System.Drawing.Size(480, 415);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtQuantidade);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnapagar);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.btncriar);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.listExtras);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menuextras";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,15 +249,17 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.Button btnapagar;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Button btncriar;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listExtras;
         private System.Windows.Forms.TextBox txtPreco;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtQuantidade;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

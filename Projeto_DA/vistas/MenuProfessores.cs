@@ -112,6 +112,8 @@ namespace Projeto_DA.vistas
             id = professorcontroller.ProcurarProfessor(nif);
         }
 
+
+
         private void ShowProfessores(List<Professor> professores)
         {
             professores = professorcontroller.ListarProfessor();

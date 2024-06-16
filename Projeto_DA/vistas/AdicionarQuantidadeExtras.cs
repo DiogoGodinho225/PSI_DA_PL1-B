@@ -17,7 +17,7 @@ namespace Projeto_DA.vistas
     {
 
         QuantidadeExtrasController quantidadeExtrasController;
-        int id_extra = 0, quantidade = 0, quantidadeAdicional = 0;
+        int id_extra, quantidade = 0, quantidadeAdicional = 0;
         ExtrasController extrasController;
         ProjetoContext context;
         List<Extra> extras;
