@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Projeto_DA.modelos;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace Projeto_DA.controladores
 {
@@ -44,7 +45,7 @@ namespace Projeto_DA.controladores
             {
                 context.Prato.Remove(prato);
                 context.SaveChanges();
-                MessageBox.Show("Pratp apagado", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Prato apagado", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -83,6 +84,14 @@ namespace Projeto_DA.controladores
                 MessageBox.Show("Prato não encontrado", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
             }
+        }
+
+        public List<Prato> MoverPratos(int id)
+        {
+            pratos = new List<Prato>();
+            Prato prato = context.Prato.FirstOrDefault(p => p.id == id);
+            pratos.Add(prato);
+            return pratos;
         }
 
     }

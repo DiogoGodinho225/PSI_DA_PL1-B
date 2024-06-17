@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,12 +14,11 @@ namespace Projeto_DA.controladores
     {
         public List<Extra> extras;
         ProjetoContext context;
-        QuantidadeExtrasController quantidadeExtrasController;
 
         public ExtrasController(ProjetoContext context)
         {
             this.context = context;
-           
+
         }
 
         public List<Extra> ListarExtra()
@@ -30,8 +30,8 @@ namespace Projeto_DA.controladores
         }
 
         public void InserirExtra(string descricaoExtra, float precoExtra)
-        { 
-            var extra = new Extra { descricaoExtra = descricaoExtra, precoExtra = precoExtra, ativoExtra = true};
+        {
+            var extra = new Extra { descricaoExtra = descricaoExtra, precoExtra = precoExtra, ativoExtra = true };
             context.Extra.Add(extra);
             context.SaveChanges();
             MessageBox.Show("Extra Inserido", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -60,11 +60,10 @@ namespace Projeto_DA.controladores
             var extra = context.Extra.Find(id);
             if (extra != null)
             {
-               extra.descricaoExtra = descricaoExtra;
-               extra.precoExtra = precoExtra;
-              // extra.ativoExtra = ativoExtra;
-               context.SaveChanges();
-               MessageBox.Show("Extra Atualizado", "Atualização", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                extra.descricaoExtra = descricaoExtra;
+                extra.precoExtra = precoExtra;
+                context.SaveChanges();
+                MessageBox.Show("Extra Atualizado", "Atualização", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -87,5 +86,26 @@ namespace Projeto_DA.controladores
             }
         }
 
+        public bool VerificarAtividade(int id)
+        {
+            Extra extra = context.Extra.FirstOrDefault(e => e.id == id);
+            if (extra != null)
+            {
+                return extra.ativoExtra;
+            }
+            else
+            {
+                MessageBox.Show("Extra não encontrado", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        public List<Extra> MoverExtras(int id)
+        {
+            extras = new List<Extra>();
+            Extra extra = context.Extra.FirstOrDefault(e => e.id == id);
+            extras.Add(extra);
+            return extras;
+        }
     }
 }

@@ -18,7 +18,8 @@ namespace Projeto_DA
         QuantidadeExtrasController quantidadeExtraController;
         ExtrasController extrasController;
         ProjetoContext context;
-        int id;
+        int id, quantidadeExtra = 0;
+        bool ativo;
         Menuprincipal menuprincipal;
         List<Extra> extras;
 
@@ -117,11 +118,23 @@ namespace Projeto_DA
         {
             Extra extra = (Extra)listExtras.SelectedItem;
             int id_extra = extra.id;
+            quantidadeExtra = quantidadeExtraController.GetQuantidade(id_extra);
             txtDescricao.Text = extra.descricaoExtra;
             txtPreco.Text = extra.precoExtra.ToString();
-            txtQuantidade.Text = quantidadeExtraController.GetQuantidade(id_extra).ToString();
+            txtQuantidade.Text = quantidadeExtra.ToString();
             string descricao = extra.descricaoExtra;
             id = extrasController.ProcurarExtra(descricao);
+            ativo = extrasController.VerificarAtividade(id_extra);
+            if(ativo == true)
+            {
+                lblAtivo.Text = "Ativo";
+                lblAtivo.ForeColor = Color.Green;
+            }
+            else
+            {
+                lblAtivo.Text = "Desativo";
+                lblAtivo.ForeColor = Color.Red;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

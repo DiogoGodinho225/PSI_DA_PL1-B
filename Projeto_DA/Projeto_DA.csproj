@@ -64,6 +64,7 @@
     <Compile Include="controladores\FuncionariosController.cs" />
     <Compile Include="controladores\QuantidadeExtrasController.cs" />
     <Compile Include="controladores\QuantidadesPratosController.cs" />
+    <Compile Include="controladores\SaldoController.cs" />
     <Compile Include="vistas\AdicionarQuantidadeExtras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +76,12 @@
     </Compile>
     <Compile Include="vistas\AdicionarQuantidadePrato.Designer.cs">
       <DependentUpon>AdicionarQuantidadePrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\CriarMenus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\CriarMenus.Designer.cs">
+      <DependentUpon>CriarMenus.cs</DependentUpon>
     </Compile>
     <Compile Include="vistas\Menuextras.cs">
       <SubType>Form</SubType>
@@ -135,11 +142,20 @@
     <Compile Include="vistas\MenuProfessores.Designer.cs">
       <DependentUpon>MenuProfessores.cs</DependentUpon>
     </Compile>
+    <Compile Include="vistas\Saldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\Saldo.Designer.cs">
+      <DependentUpon>Saldo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="vistas\AdicionarQuantidadeExtras.resx">
       <DependentUpon>AdicionarQuantidadeExtras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\AdicionarQuantidadePrato.resx">
       <DependentUpon>AdicionarQuantidadePrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\CriarMenus.resx">
+      <DependentUpon>CriarMenus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\Menuextras.resx">
       <DependentUpon>Menuextras.cs</DependentUpon>
@@ -171,6 +187,9 @@
     </Compile>
     <EmbeddedResource Include="vistas\MenuProfessores.resx">
       <DependentUpon>MenuProfessores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\Saldo.resx">
+      <DependentUpon>Saldo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

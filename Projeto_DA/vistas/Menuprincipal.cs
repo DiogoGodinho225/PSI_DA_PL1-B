@@ -53,7 +53,9 @@ namespace Projeto_DA
 
         private void btnmenu_Click(object sender, EventArgs e)
         {
-
+            CriarMenus criarMenus = new CriarMenus();
+            criarMenus.Show();
+            this.Hide();
         }
 
         private void btnextras_Click(object sender, EventArgs e)

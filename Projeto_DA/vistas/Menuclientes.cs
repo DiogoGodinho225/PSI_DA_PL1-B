@@ -64,5 +64,12 @@ namespace Projeto_DA.vistas
             principal.Show();
             this.Close();
         }
+
+        private void btnSaldo_Click(object sender, EventArgs e)
+        {
+            Saldo saldo = new Saldo();
+            saldo.Show();
+            this.Close();
+        }
     }
 }

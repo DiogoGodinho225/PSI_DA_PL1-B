@@ -8,7 +8,6 @@ namespace Projeto_DA.modelos
 {
     public class Extra
     {
-
         public int id{ get; set; }
         public string descricaoExtra {  get; set; }
 
@@ -18,15 +17,7 @@ namespace Projeto_DA.modelos
 
         public override string ToString()
         {
-            if (ativoExtra == true)
-            {
-                return descricaoExtra + " | Preco: " + precoExtra + " (Ativo)";
-            }
-            else
-            {
-                return descricaoExtra + " | Preco: " + precoExtra + " (Desativo)";
-            }
+            return descricaoExtra + " | Preco: " + precoExtra;  
         }
-
     }
 }
