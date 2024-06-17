@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxsaldo = new System.Windows.Forms.TextBox();
             this.btnAddSaldo = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -43,12 +43,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Inserir Saldo:";
             // 
-            // textBox1
+            // textBoxsaldo
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 58);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxsaldo.Location = new System.Drawing.Point(15, 58);
+            this.textBoxsaldo.Name = "textBoxsaldo";
+            this.textBoxsaldo.Size = new System.Drawing.Size(100, 20);
+            this.textBoxsaldo.TabIndex = 1;
             // 
             // btnAddSaldo
             // 
@@ -58,6 +58,7 @@
             this.btnAddSaldo.TabIndex = 2;
             this.btnAddSaldo.Text = "Adicionar";
             this.btnAddSaldo.UseVisualStyleBackColor = true;
+            this.btnAddSaldo.Click += new System.EventHandler(this.btnAddSaldo_Click);
             // 
             // btnVoltar
             // 
@@ -67,6 +68,7 @@
             this.btnVoltar.TabIndex = 3;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // Saldo
             // 
@@ -75,7 +77,7 @@
             this.ClientSize = new System.Drawing.Size(209, 191);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnAddSaldo);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxsaldo);
             this.Controls.Add(this.label1);
             this.Name = "Saldo";
             this.Text = "Saldo";
@@ -87,7 +89,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxsaldo;
         private System.Windows.Forms.Button btnAddSaldo;
         private System.Windows.Forms.Button btnVoltar;
     }

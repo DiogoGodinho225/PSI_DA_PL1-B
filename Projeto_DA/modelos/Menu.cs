@@ -12,8 +12,6 @@ namespace Projeto_DA.modelos
 
         public DateTime menuDataHora {  get; set; }
 
-        public int qntDisponivel { get; set; }
-
         public float precoEstudante {  get; set; }
         
         public float precoProfessor { get; set; }

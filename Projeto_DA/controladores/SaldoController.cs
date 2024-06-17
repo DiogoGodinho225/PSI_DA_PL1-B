@@ -8,13 +8,14 @@ using System.Windows.Forms;
 
 namespace Projeto_DA.controladores
 {
-    internal class SaldoController
+    public class SaldoController
     {
         ProjetoContext context;
-
+       
         public SaldoController(ProjetoContext context)
         {
             this.context = context;
+        
         }
 
         public void AlterarSaldo(int id, float saldo)
@@ -30,9 +31,21 @@ namespace Projeto_DA.controladores
             }
             else
             {
-                MessageBox.Show("Cliente não encontrado", "Atualização", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cliente = new Cliente { saldo = saldo};
+                context.Cliente.Add(cliente);
+                MessageBox.Show("Saldo Adicionado", "Atualização", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             context.SaveChanges();
+        }
+
+        public float GetSaldo(int id)
+        {
+            var saldo = context.Cliente.FirstOrDefault(s => s.id == id);
+            if (saldo != null)
+            {
+                return saldo.saldo;
+            }
+            return 0;
         }
     }
 }

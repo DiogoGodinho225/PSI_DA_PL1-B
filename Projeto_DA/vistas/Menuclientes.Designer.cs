@@ -39,7 +39,7 @@
             this.btnSaldo = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelsaldo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,6 +51,7 @@
             this.listProfessores.Name = "listProfessores";
             this.listProfessores.Size = new System.Drawing.Size(182, 277);
             this.listProfessores.TabIndex = 0;
+            this.listProfessores.DoubleClick += new System.EventHandler(this.SaldoProfessoresDoubleClick);
             // 
             // btnEstudantes
             // 
@@ -88,6 +89,7 @@
             this.listEstudantes.Name = "listEstudantes";
             this.listEstudantes.Size = new System.Drawing.Size(182, 277);
             this.listEstudantes.TabIndex = 3;
+            this.listEstudantes.DoubleClick += new System.EventHandler(this.SaldoEstudantesDoubleClick);
             // 
             // btnVoltar
             // 
@@ -154,21 +156,21 @@
             this.label2.TabIndex = 42;
             this.label2.Text = "Saldo:";
             // 
-            // label3
+            // labelsaldo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(257, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "0.00";
+            this.labelsaldo.AutoSize = true;
+            this.labelsaldo.Location = new System.Drawing.Point(257, 58);
+            this.labelsaldo.Name = "labelsaldo";
+            this.labelsaldo.Size = new System.Drawing.Size(28, 13);
+            this.labelsaldo.TabIndex = 43;
+            this.labelsaldo.Text = "0.00";
             // 
             // Menuclientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 408);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelsaldo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSaldo);
             this.Controls.Add(this.label1);
@@ -202,6 +204,6 @@
         private System.Windows.Forms.Button btnSaldo;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelsaldo;
     }
 }

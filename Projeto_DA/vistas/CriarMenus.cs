@@ -63,10 +63,24 @@ namespace Projeto_DA.vistas
                 MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
-            { 
-
-                //menusController.inserirMenus(,);
-                List<Professor> listprofessor = new List<Professor>();                  
+            {
+                foreach (var item in listaMenus) 
+                {
+                    if(item is Prato prato)
+                    {
+                        pratos.Add(prato);
+                    }
+                    else if (item is Extra extra)
+                    {
+                       extras.Add(extra);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Itens não encontrados", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                string datestring = dateTimeMenu.Value.ToShortDateString()+ " " + txtHora.Text;
+                menusController.inserirMenus(DateTime.Parse(datestring), extras, pratos);
             }
         }
     }

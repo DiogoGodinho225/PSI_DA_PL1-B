@@ -18,8 +18,11 @@ namespace Projeto_DA.vistas
         ProjetoContext context;
         ProfessorController professorController;
         EstudantesController estudantesController;
+        SaldoController saldoController;
         List<Professor> professores;
         List<Estudante> estudantes;
+        int id;
+        float saldo;
         public Menuclientes()
         {
             InitializeComponent();
@@ -29,6 +32,7 @@ namespace Projeto_DA.vistas
         {
             context = new ProjetoContext();
             professorController = new ProfessorController(context);
+            saldoController = new SaldoController(context);
             professores = new List<Professor>();
             professores = professorController.ListarProfessor();
             foreach (var professor in professores)
@@ -70,6 +74,26 @@ namespace Projeto_DA.vistas
             Saldo saldo = new Saldo();
             saldo.Show();
             this.Close();
+        }
+
+        private void SaldoProfessoresDoubleClick(object sender, EventArgs e)
+        {
+            if (listProfessores.SelectedItem != null && listProfessores.SelectedItem is Professor professor)
+            {
+                id = professor.id;
+                saldo = saldoController.GetSaldo(id);
+                labelsaldo.Text = saldo.ToString();
+            }
+        }
+
+        private void SaldoEstudantesDoubleClick(object sender, EventArgs e)
+        {
+            if (listEstudantes.SelectedItem != null && listEstudantes.SelectedItem is Estudante estudante)
+            {
+                id = estudante.id;
+                saldo = saldoController.GetSaldo(id);
+                labelsaldo.Text = saldo.ToString();
+            }
         }
     }
 }
