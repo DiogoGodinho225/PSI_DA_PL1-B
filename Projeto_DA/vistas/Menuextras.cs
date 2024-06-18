@@ -43,6 +43,7 @@ namespace Projeto_DA
             if (txtDescricao.Text.Length == 0 || txtPreco.Text.Length == 0)
             {
                 MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               
             }
             else
             {

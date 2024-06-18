@@ -71,5 +71,12 @@ namespace Projeto_DA
             menupratos.Show();
             this.Hide();
         }
+
+        private void btnreservas_Click(object sender, EventArgs e)
+        {
+            MenuReservas reservas = new MenuReservas();
+            reservas.Show();
+            this.Hide();
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace Projeto_DA.vistas
         SaldoController saldoController;
         List<Professor> professores;
         List<Estudante> estudantes;
-        int id;
+        public static int id;
         float saldo;
         public Menuclientes()
         {

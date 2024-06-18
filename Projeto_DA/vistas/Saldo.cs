@@ -21,8 +21,9 @@ namespace Projeto_DA.vistas
         public Saldo()
         {
             InitializeComponent();
-            saldoController = new SaldoController(context);
             context = new ProjetoContext();
+            saldoController = new SaldoController(context);
+            id = Menuclientes.id;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace Projeto_DA.vistas
         private void btnAddSaldo_Click(object sender, EventArgs e)
         {
             saldoAdicional = float.Parse(textBoxsaldo.Text);
-            if (saldoAdicional != null)
+            if (saldoAdicional != 0)
             {
                 saldoController.AlterarSaldo(id, saldoAdicional);
                 saldo = saldoController.GetSaldo(id);

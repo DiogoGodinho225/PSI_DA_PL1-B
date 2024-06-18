@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             this.dateTimeMenu = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btncriar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.listPratos = new System.Windows.Forms.ListBox();
-            this.listExtras = new System.Windows.Forms.ListBox();
             this.listMenu = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtHora = new System.Windows.Forms.TextBox();
@@ -43,23 +41,10 @@
             // dateTimeMenu
             // 
             this.dateTimeMenu.Checked = false;
-            this.dateTimeMenu.Location = new System.Drawing.Point(78, 399);
+            this.dateTimeMenu.Location = new System.Drawing.Point(78, 387);
             this.dateTimeMenu.Name = "dateTimeMenu";
             this.dateTimeMenu.Size = new System.Drawing.Size(200, 20);
             this.dateTimeMenu.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Window;
-            this.label1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label1.Location = new System.Drawing.Point(11, 184);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 16);
-            this.label1.TabIndex = 66;
-            this.label1.Text = "Extras";
             // 
             // label2
             // 
@@ -76,7 +61,7 @@
             // 
             // btncriar
             // 
-            this.btncriar.Location = new System.Drawing.Point(131, 467);
+            this.btncriar.Location = new System.Drawing.Point(131, 455);
             this.btncriar.Name = "btncriar";
             this.btncriar.Size = new System.Drawing.Size(75, 23);
             this.btncriar.TabIndex = 68;
@@ -102,18 +87,9 @@
             this.listPratos.FormattingEnabled = true;
             this.listPratos.Location = new System.Drawing.Point(12, 32);
             this.listPratos.Name = "listPratos";
-            this.listPratos.Size = new System.Drawing.Size(124, 147);
+            this.listPratos.Size = new System.Drawing.Size(124, 329);
             this.listPratos.TabIndex = 70;
             this.listPratos.DoubleClick += new System.EventHandler(this.pratosDoubleClick);
-            // 
-            // listExtras
-            // 
-            this.listExtras.FormattingEnabled = true;
-            this.listExtras.Location = new System.Drawing.Point(12, 212);
-            this.listExtras.Name = "listExtras";
-            this.listExtras.Size = new System.Drawing.Size(124, 160);
-            this.listExtras.TabIndex = 71;
-            this.listExtras.DoubleClick += new System.EventHandler(this.extraDoubleClick);
             // 
             // listMenu
             // 
@@ -129,7 +105,7 @@
             this.label4.BackColor = System.Drawing.SystemColors.Window;
             this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label4.Location = new System.Drawing.Point(147, 422);
+            this.label4.Location = new System.Drawing.Point(147, 410);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 16);
@@ -138,7 +114,7 @@
             // 
             // txtHora
             // 
-            this.txtHora.Location = new System.Drawing.Point(120, 441);
+            this.txtHora.Location = new System.Drawing.Point(120, 429);
             this.txtHora.Name = "txtHora";
             this.txtHora.Size = new System.Drawing.Size(100, 20);
             this.txtHora.TabIndex = 3;
@@ -150,12 +126,10 @@
             this.ClientSize = new System.Drawing.Size(365, 530);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.listMenu);
-            this.Controls.Add(this.listExtras);
             this.Controls.Add(this.listPratos);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btncriar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtHora);
             this.Controls.Add(this.dateTimeMenu);
             this.Name = "CriarMenus";
@@ -167,12 +141,10 @@
 
         #endregion
         private System.Windows.Forms.DateTimePicker dateTimeMenu;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btncriar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listPratos;
-        private System.Windows.Forms.ListBox listExtras;
         private System.Windows.Forms.ListBox listMenu;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtHora;

@@ -15,24 +15,20 @@ namespace Projeto_DA.vistas
 {
     public partial class CriarMenus : Form
     {
-        List<Extra> extras;
         List<Prato> pratos;
         List<object> listaMenus;
         ProjetoContext context;
-        ExtrasController extrasController;
         PratosController pratosController;
         MenusController menusController;
         public CriarMenus()
         {
             InitializeComponent();
             context = new ProjetoContext();
-            extrasController = new ExtrasController(context);
             pratosController = new PratosController(context);
-            extras = extrasController.ListarExtra();
             pratos = pratosController.ListarPratos();
             listaMenus = new List<object>();
             listPratos.DataSource = pratos.ToList();
-            listExtras.DataSource = extras.ToList();
+          
         }
 
         private void pratosDoubleClick(object sender, EventArgs e)
@@ -44,16 +40,6 @@ namespace Projeto_DA.vistas
             listMenu.DataSource = null;
             listMenu.DataSource = listaMenus.ToList();
             menusController = new MenusController(context);
-        }
-
-        private void extraDoubleClick(object sender, EventArgs e)
-        {
-            Extra extra = (Extra)listExtras.SelectedItem;
-            int id_Extra = extra.id;
-            extras = extrasController.MoverExtras(id_Extra);
-            listaMenus.AddRange(extras);
-            listMenu.DataSource = null;
-            listMenu.DataSource = listaMenus.ToList();
         }
 
         private void btncriar_Click(object sender, EventArgs e)
@@ -70,17 +56,14 @@ namespace Projeto_DA.vistas
                     {
                         pratos.Add(prato);
                     }
-                    else if (item is Extra extra)
-                    {
-                       extras.Add(extra);
-                    }
+     
                     else
                     {
                         MessageBox.Show("Itens não encontrados", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 string datestring = dateTimeMenu.Value.ToShortDateString()+ " " + txtHora.Text;
-                menusController.inserirMenus(DateTime.Parse(datestring), extras, pratos);
+                menusController.inserirMenus(DateTime.Parse(datestring), pratos);
             }
         }
     }
