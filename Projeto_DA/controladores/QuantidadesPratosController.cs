@@ -51,6 +51,25 @@ namespace Projeto_DA.controladores
             }
             return 0;
         }
+
+        public void TirarQuantidadePrato(int id, int qntPrato)
+        {
+            QuantidadePratos quantidadePratos = context.QuantidadePratos.FirstOrDefault(q => q.id == id);
+
+            if (quantidadePratos != null)
+            {
+                if (quantidadePratos.quantidadePrato > qntPrato)
+                {
+                    quantidadePratos.quantidadePrato = qntPrato;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não existe quantidade", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            context.SaveChanges();
+
+        }
     }
 }
 

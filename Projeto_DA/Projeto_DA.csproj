@@ -57,7 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controladores\ExtrasController.cs" />
+    <Compile Include="controladores\FaturaController.cs" />
     <Compile Include="controladores\MenusController.cs" />
+    <Compile Include="controladores\MultasController.cs" />
     <Compile Include="controladores\PratosController.cs" />
     <Compile Include="controladores\ProfessorController.cs" />
     <Compile Include="controladores\EstudantesController.cs" />
@@ -66,6 +68,8 @@
     <Compile Include="controladores\QuantidadesPratosController.cs" />
     <Compile Include="controladores\ReservaController.cs" />
     <Compile Include="controladores\SaldoController.cs" />
+    <Compile Include="controladores\utilizadoresController.cs" />
+    <Compile Include="modelos\ReservaExtras.cs" />
     <Compile Include="vistas\AdicionarQuantidadeExtras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +107,12 @@
     </Compile>
     <Compile Include="vistas\Menuestudantes.Designer.cs">
       <DependentUpon>Menuestudantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\MenuMultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\MenuMultas.Designer.cs">
+      <DependentUpon>MenuMultas.cs</DependentUpon>
     </Compile>
     <Compile Include="vistas\MenuPratos.cs">
       <SubType>Form</SubType>
@@ -178,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\Menuestudantes.resx">
       <DependentUpon>Menuestudantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\MenuMultas.resx">
+      <DependentUpon>MenuMultas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\MenuPratos.resx">
       <DependentUpon>MenuPratos.cs</DependentUpon>

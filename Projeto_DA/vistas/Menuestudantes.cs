@@ -111,11 +111,12 @@ namespace Projeto_DA.vistas
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            Menuclientes menuclientes = new Menuclientes();
-            menuclientes.Show();
+            Menuclientes clientes = new Menuclientes();
+            clientes.Show();
             this.Close();
         }
 
+ 
 
         private void Menuestudantes_Load(object sender, EventArgs e)
         {

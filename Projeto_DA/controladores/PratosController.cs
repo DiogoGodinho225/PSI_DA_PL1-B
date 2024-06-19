@@ -30,7 +30,7 @@ namespace Projeto_DA.controladores
 
         public void InserirPrato(string descricaoPrato, string tipo)
         {
-            var prato = new Prato { descricao = descricaoPrato, tipo = tipo,  ativoPrato = true };
+            var prato = new Prato { descricao = descricaoPrato, tipo = tipo,  ativoPrato = false };
             context.Prato.Add(prato);
             context.SaveChanges();
             MessageBox.Show("Prato Inserido", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -58,10 +58,8 @@ namespace Projeto_DA.controladores
             var prato = context.Prato.Find(id);
             if (prato != null)
             {
-                // quantidadePratosController.VerificarExistencia(id);
                 prato.descricao = descricao;
                 prato.tipo = tipo;
-                // prato.ativoPrato = ativoPrato;
                 context.SaveChanges();
                 MessageBox.Show("Prato Atualizado", "Atualização", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -92,6 +90,45 @@ namespace Projeto_DA.controladores
             Prato prato = context.Prato.FirstOrDefault(p => p.id == id);
             pratos.Add(prato);
             return pratos;
+        }
+
+        public List<Prato> ProcurarPratoTipo(string tipo)
+        {
+            var prato = context.Prato.Where(p => p.tipo == tipo).ToList();
+            if (prato != null)
+            { 
+                return prato;
+            }
+            else
+            {
+                MessageBox.Show("Prato não encontrado", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public void AlterarEstado(int id)
+        {
+            var estadoprato = context.Prato.FirstOrDefault(q => q.id == id);
+
+            if (estadoprato != null)
+            {
+                estadoprato.ativoPrato = true;
+                context.SaveChanges();
+            }
+        }
+
+        public bool verificarEstado(int id)
+        {
+            var estadoprato = context.Prato.FirstOrDefault(q => q.id == id);
+
+            if(estadoprato != null)
+            {
+                if(estadoprato.ativoPrato != true)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
     }

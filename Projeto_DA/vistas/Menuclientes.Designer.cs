@@ -93,14 +93,17 @@
             // 
             // btnVoltar
             // 
+            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(87)))));
             this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVoltar.Location = new System.Drawing.Point(207, 356);
+            this.btnVoltar.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Bold);
+            this.btnVoltar.ForeColor = System.Drawing.Color.Black;
+            this.btnVoltar.Location = new System.Drawing.Point(216, 365);
             this.btnVoltar.Margin = new System.Windows.Forms.Padding(2);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(97, 32);
             this.btnVoltar.TabIndex = 4;
             this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // pictureBox1
@@ -139,18 +142,22 @@
             // 
             // btnSaldo
             // 
-            this.btnSaldo.Location = new System.Drawing.Point(216, 74);
+            this.btnSaldo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(87)))));
+            this.btnSaldo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaldo.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Bold);
+            this.btnSaldo.Location = new System.Drawing.Point(216, 299);
             this.btnSaldo.Name = "btnSaldo";
-            this.btnSaldo.Size = new System.Drawing.Size(97, 23);
+            this.btnSaldo.Size = new System.Drawing.Size(97, 32);
             this.btnSaldo.TabIndex = 41;
             this.btnSaldo.Text = "Adicionar Saldo";
-            this.btnSaldo.UseVisualStyleBackColor = true;
+            this.btnSaldo.UseVisualStyleBackColor = false;
             this.btnSaldo.Click += new System.EventHandler(this.btnSaldo_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(214, 58);
+            this.label2.BackColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(232, 273);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 42;
@@ -159,7 +166,8 @@
             // labelsaldo
             // 
             this.labelsaldo.AutoSize = true;
-            this.labelsaldo.Location = new System.Drawing.Point(257, 58);
+            this.labelsaldo.BackColor = System.Drawing.SystemColors.Window;
+            this.labelsaldo.Location = new System.Drawing.Point(265, 273);
             this.labelsaldo.Name = "labelsaldo";
             this.labelsaldo.Size = new System.Drawing.Size(28, 13);
             this.labelsaldo.TabIndex = 43;

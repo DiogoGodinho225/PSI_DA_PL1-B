@@ -43,7 +43,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblAtivo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +51,7 @@
             // 
             this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(87)))));
             this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVoltar.Location = new System.Drawing.Point(291, 356);
+            this.btnVoltar.Location = new System.Drawing.Point(291, 331);
             this.btnVoltar.Margin = new System.Windows.Forms.Padding(2);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(97, 32);
@@ -65,7 +64,7 @@
             // 
             this.btneditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(87)))));
             this.btneditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btneditar.Location = new System.Drawing.Point(291, 300);
+            this.btneditar.Location = new System.Drawing.Point(291, 271);
             this.btneditar.Margin = new System.Windows.Forms.Padding(2);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(97, 32);
@@ -78,7 +77,7 @@
             // 
             this.btnapagar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(87)))));
             this.btnapagar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnapagar.Location = new System.Drawing.Point(291, 264);
+            this.btnapagar.Location = new System.Drawing.Point(291, 235);
             this.btnapagar.Margin = new System.Windows.Forms.Padding(2);
             this.btnapagar.Name = "btnapagar";
             this.btnapagar.Size = new System.Drawing.Size(97, 32);
@@ -99,7 +98,7 @@
             // 
             this.btncriar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(87)))));
             this.btncriar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btncriar.Location = new System.Drawing.Point(291, 228);
+            this.btncriar.Location = new System.Drawing.Point(291, 199);
             this.btncriar.Margin = new System.Windows.Forms.Padding(2);
             this.btncriar.Name = "btncriar";
             this.btncriar.Size = new System.Drawing.Size(97, 32);
@@ -138,7 +137,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(87)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(273, 171);
+            this.button1.Location = new System.Drawing.Point(273, 139);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 30);
@@ -214,22 +213,11 @@
             this.pictureBox2.TabIndex = 68;
             this.pictureBox2.TabStop = false;
             // 
-            // lblAtivo
-            // 
-            this.lblAtivo.AutoSize = true;
-            this.lblAtivo.BackColor = System.Drawing.SystemColors.Window;
-            this.lblAtivo.Location = new System.Drawing.Point(328, 138);
-            this.lblAtivo.Name = "lblAtivo";
-            this.lblAtivo.Size = new System.Drawing.Size(78, 13);
-            this.lblAtivo.TabIndex = 69;
-            this.lblAtivo.Text = "Ativo/Desativo";
-            // 
             // Menuextras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 415);
-            this.Controls.Add(this.lblAtivo);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
@@ -272,6 +260,5 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lblAtivo;
     }
 }

@@ -37,31 +37,52 @@ namespace Projeto_DA.controladores
 
             if (menus.Any())
             {
-                foreach (var menu in menus)
-                {
-                    Console.WriteLine(menu.ToString());
-                }
+                return menus;
             }
-            else
-            {
-                Console.WriteLine("Nenhum menu encontrado para a data especificada.");
-            }
-
-            return menus;
+            return null;
+            
         }
 
-        public List<DateTime> procurarData()
+        public Projeto_DA.modelos.Menu procurarMenuDataReservas(DateTime data)
         {
-            List<DateTime> data = context.Menu.Select(d => d.menuDataHora).ToList();
-            if (data != null)
-            {
-                return data;
+            Projeto_DA.modelos.Menu menus = context.Menu.Include(m => m.pratos).Where(m => DbFunctions.TruncateTime(m.menuDataHora) == DbFunctions.TruncateTime(data)).FirstOrDefault();
+
+            if (menus != null)
+            { 
+                return menus;  
             }
             return null;
         }
 
+        public bool procurarMenuData(DateTime data)
+        {
+            Projeto_DA.modelos.Menu menus = context.Menu.Include(m => m.pratos).Where(m => DbFunctions.TruncateTime(m.menuDataHora) == DbFunctions.TruncateTime(data)).FirstOrDefault();
 
-    }
+            if (menus != null)
+            {
+                return true;
+            }
+            return false;
+        }
 
-    
+        public int ProcurarMenuData(DateTime data)
+        {
+            var menu = context.Menu.FirstOrDefault(m => DbFunctions.TruncateTime(m.menuDataHora) == DbFunctions.TruncateTime(data));
+
+            if (menu != null)
+            {
+                return menu.id;
+            }
+
+            return 0;
+        }
+
+        public Projeto_DA.modelos.Menu ObterMenuPorId(int menuId)
+        {
+            var menu = context.Menu.Include(m => m.pratos).FirstOrDefault(m => m.id == menuId);
+
+            return menu;
+        }
+
+    } 
 }

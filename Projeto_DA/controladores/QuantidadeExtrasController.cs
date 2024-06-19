@@ -51,5 +51,23 @@ namespace Projeto_DA.controladores
             }
              return 0;
         }
+
+        public void TirarQuantidadeExtra(int id, int qntExtra)
+        {
+            QuantidadeExtra quantidadeExtra = context.QuantidadeExtra.FirstOrDefault(q => q.id == id);
+            if (quantidadeExtra != null)
+            {
+                if (quantidadeExtra.qntExtra > qntExtra)
+                {
+                    quantidadeExtra.qntExtra = qntExtra;
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Extra não encontrado", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            context.SaveChanges();
+        }
     }
 }

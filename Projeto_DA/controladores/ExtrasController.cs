@@ -31,7 +31,7 @@ namespace Projeto_DA.controladores
 
         public void InserirExtra(string descricaoExtra, float precoExtra)
         {
-            var extra = new Extra { descricaoExtra = descricaoExtra, precoExtra = precoExtra, ativoExtra = true };
+            var extra = new Extra { descricaoExtra = descricaoExtra, precoExtra = precoExtra, ativoExtra = false };
             context.Extra.Add(extra);
             context.SaveChanges();
             MessageBox.Show("Extra Inserido", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -106,6 +106,30 @@ namespace Projeto_DA.controladores
             Extra extra = context.Extra.FirstOrDefault(e => e.id == id);
             extras.Add(extra);
             return extras;
+        }
+
+        public void AlterarEstado(int id)
+        {
+            var estadoextra = context.Extra.FirstOrDefault(e => e.id == id);
+
+            if (estadoextra != null)
+            {
+                estadoextra.ativoExtra = true;
+                context.SaveChanges();
+            }
+        }
+
+        public bool verificarEstado(int id)
+        {
+            var estadoextra = context.Extra.FirstOrDefault(q => q.id == id);
+            if (estadoextra != null)
+            {
+                if (estadoextra.ativoExtra != true)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

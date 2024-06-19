@@ -33,6 +33,7 @@ namespace Projeto_DA.vistas
             this.Close();
         }
 
+
         private void btnAddSaldo_Click(object sender, EventArgs e)
         {
             saldoAdicional = float.Parse(textBoxsaldo.Text);

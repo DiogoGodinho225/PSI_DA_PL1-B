@@ -17,7 +17,15 @@ namespace Projeto_DA.modelos
 
         public override string ToString()
         {
-            return descricaoExtra + " | Preco: " + precoExtra;  
+            if (ativoExtra == true)
+            {
+                return descricaoExtra + " | Preco: " + precoExtra + " (Ativo)";
+            }
+            else
+            {
+                return descricaoExtra + " | Preco: " + precoExtra + " (Desativo)"; ;
+            }
+            
         }
     }
 }

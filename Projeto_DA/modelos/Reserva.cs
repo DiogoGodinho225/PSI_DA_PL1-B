@@ -11,14 +11,19 @@ namespace Projeto_DA.modelos
     {
         public int id{  get; set; }
 
-        public Prato pratos { get; set; }
-
-        public Extra extras { get; set; }
+        public Prato pratos { get; set; } = new Prato();
 
         public Multa multas { get; set; }
 
-        public Cliente clientes { get; set; }
+        public Cliente clientes { get; set; } = new Cliente();
 
         public Menu menus { get; set; }
+
+        public bool utilizado { get; set; }
+
+        public override string ToString()
+        {
+            return "Cliente: " + clientes.nome_Utilizador + " Prato: " + pratos.descricao;
+        }
     }
 }

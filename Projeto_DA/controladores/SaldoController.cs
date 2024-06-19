@@ -38,6 +38,30 @@ namespace Projeto_DA.controladores
             context.SaveChanges();
         }
 
+        public bool TirarSaldo(int id, float saldo)
+        {
+            Cliente cliente = context.Cliente.FirstOrDefault(s => s.id == id);
+
+            if (cliente != null)
+            {
+                if(cliente.saldo > saldo)
+                {
+                    cliente.saldo = saldo;
+                }
+                else
+                {
+                    return false;
+                }       
+            }
+            else
+            {
+                MessageBox.Show("Cliente não encotrado", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            context.SaveChanges();
+            return true;
+            
+        }
+
         public float GetSaldo(int id)
         {
             var saldo = context.Cliente.FirstOrDefault(s => s.id == id);

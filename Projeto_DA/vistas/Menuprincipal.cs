@@ -10,13 +10,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Projeto_DA
 {
     public partial class Menuprincipal : Form
     {
+        MenusController menusController;
         FuncionariosController funcionariosController;
+        utilizadoresController utilizadoresController;
         ProjetoContext context;
+        int id;
+        bool VerificarFuncionario = false, menuencontrado = false;
+        DateTime menuDiaEncontrado;
+        List<Projeto_DA.modelos.Menu> menus;
         public Menuprincipal()
         {
             InitializeComponent();
@@ -26,14 +33,13 @@ namespace Projeto_DA
         {
             context = new ProjetoContext();
             funcionariosController = new FuncionariosController(context);
+            utilizadoresController = new utilizadoresController(context);
+            menusController = new MenusController(context);
             List<Funcionario> funcionarios = new List<Funcionario>();
+            menus = new List<Projeto_DA.modelos.Menu>();
             funcionarios = funcionariosController.ListarFuncionario();
-
-
-            foreach(var funcionario in funcionarios)
-            {
-                listFuncionarios.Items.Add(funcionario);
-            }
+            listFuncionarios.DataSource = null;
+            listFuncionarios.DataSource = funcionarios;
         }
 
         private void btnFuncionarios_Click(object sender, EventArgs e)
@@ -46,9 +52,14 @@ namespace Projeto_DA
 
         private void btnclientes_Click(object sender, EventArgs e)
         {
-            Menuclientes menuclientes = new Menuclientes();
-            menuclientes.Show();
-            this.Hide();
+            VerificarFuncionario = utilizadoresController.ProcurarTipo(id);
+
+            if (VerificarFuncionario == true)
+            {
+                Menuclientes clientes = new Menuclientes();
+                clientes.Show();
+                this.Hide();
+            }
         }
 
         private void btnmenu_Click(object sender, EventArgs e)
@@ -74,9 +85,56 @@ namespace Projeto_DA
 
         private void btnreservas_Click(object sender, EventArgs e)
         {
-            MenuReservas reservas = new MenuReservas();
-            reservas.Show();
+            VerificarFuncionario = utilizadoresController.ProcurarTipo(id);
+
+            if(VerificarFuncionario == true)
+            {
+                MenuReservas reservas = new MenuReservas();
+                reservas.Show();
+                this.Hide();
+            }       
+        }
+
+        private void ListFuncionarios_doubleClick(object sender, EventArgs e)
+        {
+            Funcionario funcionario = (Funcionario)listFuncionarios.SelectedItem;
+            id = funcionariosController.ProcurarFuncionario(funcionario.nif);
+        }
+
+        private void btnmultas_Click(object sender, EventArgs e)
+        {
+            MenuMultas multas = new MenuMultas();
+            multas.Show();
             this.Hide();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            menus = null;
+            DateTime dataselecionada = dateTimePicker1.Value.Date;
+            menus = menusController.procurarMenus(dataselecionada);
+            if (menus != null)
+            {
+                menuencontrado = true;
+            }
+            else
+            {
+                menuencontrado = false;
+            }
+
+            if (menuencontrado == true)
+            {
+                Listmenu.DataSource = null;
+                foreach (var menu in menus)
+                {
+                    Listmenu.DataSource = menus.ToList();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não existem menus para esse dia", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Listmenu.DataSource = null;
+            }
         }
     }
 }

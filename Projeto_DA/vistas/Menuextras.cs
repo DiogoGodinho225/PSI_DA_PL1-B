@@ -126,16 +126,6 @@ namespace Projeto_DA
             string descricao = extra.descricaoExtra;
             id = extrasController.ProcurarExtra(descricao);
             ativo = extrasController.VerificarAtividade(id_extra);
-            if(ativo == true)
-            {
-                lblAtivo.Text = "Ativo";
-                lblAtivo.ForeColor = Color.Green;
-            }
-            else
-            {
-                lblAtivo.Text = "Desativo";
-                lblAtivo.ForeColor = Color.Red;
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)

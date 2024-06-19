@@ -22,6 +22,7 @@ namespace Projeto_DA.vistas
         int id;
         Menuprincipal menuprincipal;
         List<Prato> pratos;
+ 
         QuantidadePratosController quantidadePratosController;
 
         public MenuPratos()
@@ -33,6 +34,10 @@ namespace Projeto_DA.vistas
             pratos = pratosController.ListarPratos();
             listPratos.DataSource = null;
             txtQuantidade.Enabled = false;
+            comboTipo.Enabled = false;
+            comboTipo.Items.Add("Carne");
+            comboTipo.Items.Add("Peixe");
+            comboTipo.Items.Add("Vegetariano");
             foreach (var extra in pratos)
             {
                 listPratos.DataSource = pratos.ToList();
@@ -49,14 +54,14 @@ namespace Projeto_DA.vistas
             {
 
                 string descricao = txtDescricao.Text;
-                string tipo = txtTipo.Text;
+                string tipo = comboTipo.Text;
 
 
                 pratosController.InserirPrato (descricao, tipo);
                 List<Prato> listPratos = new List<Prato>();
                 ShowPratos(listPratos);
                 txtDescricao.Clear();
-                txtTipo.Clear();
+                comboTipo.Items.Clear();
             }
         }
 
@@ -84,11 +89,11 @@ namespace Projeto_DA.vistas
             }
             else
             {
-                pratosController.AlterarPrato(id, txtDescricao.Text, txtTipo.Text);
+                pratosController.AlterarPrato(id, txtDescricao.Text, comboTipo.Text);
                 List<Prato> listpratos = new List<Prato>();
                 ShowPratos(listpratos);
                 txtDescricao.Clear();
-                txtTipo.Clear();
+                comboTipo.Items.Clear();
 
             }
         }
@@ -115,7 +120,7 @@ namespace Projeto_DA.vistas
             Prato prato = (Prato)listPratos.SelectedItem;
             int idPrato = prato.id;
             txtDescricao.Text = prato.descricao;
-            txtTipo.Text = prato.tipo;
+            comboTipo.Text = prato.tipo;
             txtQuantidade.Text = quantidadePratosController.GetQuantidade(idPrato).ToString();
             id = pratosController.ProcurarPrato(txtDescricao.Text);
         }

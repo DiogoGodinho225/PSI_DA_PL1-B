@@ -36,14 +36,22 @@ namespace Projeto_DA.vistas
             Prato prato = (Prato)listPratos.SelectedItem;
             int id_Pratos = prato.id;
             pratos = pratosController.MoverPratos(id_Pratos);
-            listaMenus.AddRange(pratos);
             listMenu.DataSource = null;
-            listMenu.DataSource = listaMenus.ToList();
+            foreach (var itemPrato in pratos)
+            {
+                bool estado = pratosController.verificarEstado(itemPrato.id);
+                if (estado == true)
+                {
+                    listaMenus.AddRange(pratos);
+                    listMenu.DataSource = listaMenus.ToList();
+                }
+            }
             menusController = new MenusController(context);
         }
 
         private void btncriar_Click(object sender, EventArgs e)
         {
+            bool verificacao = false;
             if (txtHora.Text.Length == 0)
             {
                 MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -56,15 +64,32 @@ namespace Projeto_DA.vistas
                     {
                         pratos.Add(prato);
                     }
-     
                     else
                     {
                         MessageBox.Show("Itens não encontrados", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                string datestring = dateTimeMenu.Value.ToShortDateString()+ " " + txtHora.Text;
-                menusController.inserirMenus(DateTime.Parse(datestring), pratos);
+
+                verificacao = menusController.procurarMenuData(DateTime.Parse(dateTimeMenu.Value.ToShortDateString()));
+
+                if(verificacao != true)
+                {
+                    string datestring = dateTimeMenu.Value.ToShortDateString() + " " + txtHora.Text;
+                    menusController.inserirMenus(DateTime.Parse(datestring), pratos);
+                    MessageBox.Show("Menu Inserido", "SUCESSO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }   
+                else
+                {
+                    MessageBox.Show("Ja existe um menu para esse dia", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Menuprincipal principal = new Menuprincipal();
+            principal.Show();
+            this.Close();
         }
     }
 }

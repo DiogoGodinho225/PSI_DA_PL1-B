@@ -58,12 +58,13 @@ namespace Projeto_DA.vistas
         private void Adicionar_Click(object sender, EventArgs e)
         {
             quantidadeAdicional = int.Parse(txtAdicionar.Text);
-            if (quantidadeAdicional != null )
+            if (quantidadeAdicional != 0)
             {
                 quantidadeExtrasController.AlterarQuantidade(id_extra, quantidadeAdicional);
                 quantidade = quantidadeExtrasController.GetQuantidade(id_extra);
                 textBoxQuantidade.Text = quantidade.ToString();
                 txtAdicionar.Clear();
+                extrasController.AlterarEstado(id_extra);
             }
         }
 

@@ -54,6 +54,7 @@
             this.listFuncionarios.Name = "listFuncionarios";
             this.listFuncionarios.Size = new System.Drawing.Size(233, 290);
             this.listFuncionarios.TabIndex = 0;
+            this.listFuncionarios.DoubleClick += new System.EventHandler(this.ListFuncionarios_doubleClick);
             // 
             // label1
             // 
@@ -77,11 +78,11 @@
             this.groupBox1.Controls.Add(this.btnextras);
             this.groupBox1.Controls.Add(this.btnclientes);
             this.groupBox1.Controls.Add(this.btnpratos);
-            this.groupBox1.Location = new System.Drawing.Point(540, 46);
+            this.groupBox1.Location = new System.Drawing.Point(779, 46);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(127, 286);
+            this.groupBox1.Size = new System.Drawing.Size(129, 286);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menu";
@@ -127,6 +128,7 @@
             this.btnmultas.TabIndex = 6;
             this.btnmultas.Text = "Multas";
             this.btnmultas.UseVisualStyleBackColor = false;
+            this.btnmultas.Click += new System.EventHandler(this.btnmultas_Click);
             // 
             // btnreservas
             // 
@@ -191,6 +193,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker1.TabIndex = 3;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // Listmenu
             // 
@@ -198,7 +201,7 @@
             this.Listmenu.Location = new System.Drawing.Point(269, 70);
             this.Listmenu.Margin = new System.Windows.Forms.Padding(2);
             this.Listmenu.Name = "Listmenu";
-            this.Listmenu.Size = new System.Drawing.Size(251, 264);
+            this.Listmenu.Size = new System.Drawing.Size(470, 264);
             this.Listmenu.TabIndex = 4;
             // 
             // label2
@@ -206,7 +209,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(354, 20);
+            this.label2.Location = new System.Drawing.Point(266, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 16);
@@ -216,9 +219,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Projeto_DA.Properties.Resources.Design_sem_nome__3_;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(-4, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(690, 369);
+            this.pictureBox1.Size = new System.Drawing.Size(951, 427);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -227,7 +230,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 372);
+            this.ClientSize = new System.Drawing.Size(947, 426);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Listmenu);
             this.Controls.Add(this.dateTimePicker1);

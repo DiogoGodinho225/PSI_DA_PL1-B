@@ -15,7 +15,7 @@ namespace Projeto_DA
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<Estudante> Estudante { get; set; }
         public DbSet<Funcionario> Funcionario { get; set; }
-        public DbSet<Professor> Professor { get; set;}
+        public DbSet<Professor> Professor { get; set; }
         public DbSet<Utilizador> Utilizador { get; set; }
         public DbSet<Extra> Extra { get; set; }
         public DbSet<Fatura> Fatura { get; set; }
@@ -28,6 +28,6 @@ namespace Projeto_DA
 
         public DbSet<QuantidadePratos> QuantidadePratos { get; set; }
 
-
+        public DbSet<ReservaExtras> ReservaExtras { get; set; }
     }
-}       
+}

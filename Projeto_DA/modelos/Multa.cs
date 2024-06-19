@@ -12,6 +12,11 @@ namespace Projeto_DA.modelos
 
         public float multa {  get; set; }
 
-        public int numHoras { get; set; }
+        public TimeSpan numHoras { get; set; }
+
+        public override string ToString()
+        {
+            return multa.ToString() + " €" + " Para : " + numHoras.ToString() + " horas";
+        }
     }
 }

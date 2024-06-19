@@ -58,6 +58,7 @@
             this.btnVoltar.TabIndex = 23;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btneditar
             // 
@@ -153,7 +154,7 @@
             this.label5.Location = new System.Drawing.Point(45, 35);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 19);
+            this.label5.Size = new System.Drawing.Size(86, 16);
             this.label5.TabIndex = 38;
             this.label5.Text = "Estudantes";
             // 
@@ -174,7 +175,7 @@
             this.label1.Location = new System.Drawing.Point(377, 151);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 19);
+            this.label1.Size = new System.Drawing.Size(30, 16);
             this.label1.TabIndex = 43;
             this.label1.Text = "NIF";
             // 
@@ -186,7 +187,7 @@
             this.label6.Location = new System.Drawing.Point(358, 120);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 19);
+            this.label6.Size = new System.Drawing.Size(47, 16);
             this.label6.TabIndex = 44;
             this.label6.Text = "Nome";
             // 
@@ -198,7 +199,7 @@
             this.label7.Location = new System.Drawing.Point(243, 91);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(181, 19);
+            this.label7.Size = new System.Drawing.Size(159, 16);
             this.label7.TabIndex = 45;
             this.label7.Text = "Numero do Estudante";
             // 
